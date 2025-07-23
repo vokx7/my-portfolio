@@ -1,3 +1,10 @@
+import Main from "./components/Main";
+import MainContainer from "./components/MainContainer";
+
 export default function Page() {
-  return <h1 class="font-bold text-3xl">Hello Next.js!</h1>;
+  return (
+    <MainContainer>
+      <Main />
+    </MainContainer>
+  );
 }

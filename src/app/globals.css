@@ -12,4 +12,8 @@
 @theme {
   --font-cormorant-garamond: "Cormorant Garamond", serif;
   --font-clash-display: "Clash Display", "sans-serif";
+  --color-lavender: #ECE4FF;
+  --color-beige: #F6F5F1;
+  --color-myblack: #212121;
+  --color-primary: oklch(0.899 0.061 343.231);
 }
