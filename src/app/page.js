@@ -1,10 +1,12 @@
 import Main from "./components/Main";
-import MainContainer from "./components/MainContainer";
+
+import Projects from "./components/Projects";
 
 export default function Page() {
   return (
-    <MainContainer>
+    <>
       <Main />
-    </MainContainer>
+      <Projects />
+    </>
   );
 }
