@@ -5,7 +5,7 @@ import MainContainer from "./MainContainer";
 const Main = () => {
   return (
     <MainContainer>
-      <div className="flex flex-col-reverse lg:flex-row items-center justify-center gap-6 p-[6rem] pb-[12rem]">
+      <div className="flex flex-col-reverse lg:flex-row items-center justify-center gap-6 pb-15 lg:p-[6rem] lg:pb-[12rem]">
         <div className="flex-1 px-4">
           <h1 className="font-clash-display font-bold text-6xl lg:text-8xl my-6">
             soft design <br /> strong code
@@ -21,7 +21,7 @@ const Main = () => {
           </p>
           <Button />
         </div>
-        <div className="flex-1 m-auto flex flex-row justify-center">
+        <div className="flex-1 m-auto flex flex-row justify-center px-4 lg:px-0">
           <Image
             src="/images/me.webp"
             width={400}
