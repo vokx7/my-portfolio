@@ -3,16 +3,16 @@ import Link from "next/link";
 import MainContainer from "./MainContainer";
 import { useEffect, useState } from "react";
 
-const NavElements = () => {
+export const NavElements = ({ className }) => {
   return (
     <>
-      <Link href="/#projects" className="lg:pr-10 md:pr-5">
+      <Link href="/#projects" className={className}>
         Projects
       </Link>
-      <Link href="/#profile" className="lg:pr-10 md:pr-5">
-        Profile
+      <Link href="/#about" className={className}>
+        About
       </Link>
-      <Link href="/#contact" className="lg:pr-10 md:pr-5">
+      <Link href="/#contact" className={className}>
         Contact
       </Link>
     </>
@@ -61,7 +61,7 @@ const NavMobile = () => {
             <line x1="6" y1="6" x2="18" y2="18" />
           </svg>
         </div>
-        <NavElements />
+        <NavElements className={"lg:pr-10 md:pr-5"} />
       </div>
     </nav>
   );
@@ -77,7 +77,7 @@ const Navigation = () => {
           </Link>
         </div>
         <nav className="hidden lg:block text-lg">
-          <NavElements />
+          <NavElements className={"lg:pr-10 md:pr-5"} />
         </nav>
         <NavMobile />
       </div>

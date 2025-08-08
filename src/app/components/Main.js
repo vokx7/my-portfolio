@@ -19,7 +19,7 @@ const Main = () => {
             responsiveness. Want to create something unique? Get in touch,
             I&apos;d be happy to help.
           </p>
-          <Button />
+          <Button>Contact me</Button>
         </div>
         <div className="flex-1 m-auto flex flex-row justify-center px-4 lg:px-0">
           <Image
