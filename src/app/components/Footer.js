@@ -5,7 +5,7 @@ import Button from "./Button";
 
 const Footer = () => {
   return (
-    <footer className="bg-myblack">
+    <footer className="bg-stone-800">
       <div className="py-14 lg:py-24 text-center">
         <Link
           href="/"
@@ -16,18 +16,32 @@ const Footer = () => {
       </div>
       <hr className="text-beige w-full" />
       <MainContainer>
-        <div className="grid grid-cols-2 md:grid-cols-3 gap-8 text-beige m-14 ">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-beige m-14 ">
           <div className="flex flex-col gap-4">
-            <h4 className="text-xl font-semibold tracking-wide py-6 text-primary">
+            <h4 className="text-xl font-semibold tracking-wide py-6 text-red-100">
               sitemap
             </h4>
             <NavElements className={""} />
           </div>
           <div className="flex flex-col gap-4">
-            <h4 className="text-xl font-semibold tracking-wide py-6 text-primary">
+            <h4 className="text-xl font-semibold tracking-wide py-6 text-red-100">
               let&apos;s social
             </h4>
-            <ul className="flex flex-col gap-4">
+            <ul className="flex flex-col gap-4 text-beige">
+              <li>
+                <a
+                  href="mailto:pawlak-weronika@outlook.com"
+                  target="_blank"
+                  className=""
+                >
+                  Email
+                </a>
+              </li>
+              <li>
+                <a href="https://github.com/vokx7" target="_blank" className="">
+                  GitHub
+                </a>
+              </li>
               <li>
                 <a
                   href="https://www.linkedin.com/in/weronika-pawlak-605596256/"
@@ -37,38 +51,21 @@ const Footer = () => {
                   LinkedIn
                 </a>
               </li>
-              <li>
-                <a
-                  href="https://www.facebook.com/vokx7"
-                  target="_blank"
-                  className=""
-                >
-                  Facebook
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://www.instagram.com/vokx7/"
-                  target="_blank"
-                  className=""
-                >
-                  Instagram
-                </a>
-              </li>
             </ul>
           </div>
-          <div className="flex flex-col gap-4 col-span-2 md:col-span-1 items-start">
-            <h4 className="text-xl font-semibold tracking-wide py-6 text-primary">
+          <div className="flex flex-col gap-4 col-span-2 items-start">
+            <h4 className="text-xl font-semibold tracking-wide py-6 text-red-100">
               get in touch
             </h4>
-            <p>
-              Your brand deserves a website that truly represents it. Let&apos;s
-              team up and make it happen.
-            </p>
-            <Button variant="outlined">Let&apos;s talk</Button>
+            <h3 className="font-clash-display text-4xl">
+              Whether you have a clear vision or just a spark of an idea,
+              I&apos;m here to help you bring it to life. Let&apos;s make
+              something amazing!
+            </h3>
+            <Button variant="outlined">Email me</Button>
           </div>
         </div>
-        <div className="text-center md:text-end text-sm text-beige py-10 lg:px-14">
+        <div className="text-center md:text-end text-sm text-beige py-10 md:px-4 lg:px-14">
           <p>All rights reserved &#169; Weronika Pawlak 2025</p>
         </div>
       </MainContainer>

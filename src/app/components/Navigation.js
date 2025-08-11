@@ -72,7 +72,10 @@ const Navigation = () => {
     <MainContainer>
       <div className="flex flex-row items-center justify-between px-5 py-4 my-10 ">
         <div>
-          <Link href="/" className="font-clash-display text-2xl tracking-wide">
+          <Link
+            href="/"
+            className="font-clash-display text-2xl tracking-wide text-pink-950"
+          >
             w. pawlak
           </Link>
         </div>

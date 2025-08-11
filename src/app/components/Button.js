@@ -1,10 +1,10 @@
 import { useMemo } from "react";
 
-const Button = ({ children, variant = "primary" }) => {
-  const primaryClasses = "border-primary bg-primary hover:bg-transparent";
+const Button = ({ children, variant = "primary", text }) => {
+  const primaryClasses = "border-pink-950 bg-transparent hover:bg-red-100";
 
   const outlinedClasses =
-    "border-primary bg-transparent text-beige hover:bg-primary hover:text-myblack";
+    "border-red-100 bg-transparent hover:bg-red-100 hover:text-myblack";
 
   const selectedClasses = useMemo(() => {
     switch (variant) {
@@ -17,9 +17,9 @@ const Button = ({ children, variant = "primary" }) => {
 
   return (
     <button
-      className={`h-14 rounded-4xl border-2 px-7 text-center ${selectedClasses}`}
+      className={`h-12 rounded-4xl border-2 px-12 text-center ${selectedClasses}`}
     >
-      <span className="text-lg">{children}</span>
+      <span className={text}>{children}</span>
     </button>
   );
 };
