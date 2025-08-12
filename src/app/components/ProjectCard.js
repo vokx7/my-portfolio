@@ -1,13 +1,20 @@
 const ProjectCard = () => {
   return (
-    <div className="flex flex-col items-center md:items-start md:flex-row gap-10 bg-beige p-8 lg:h-[clamp(20rem,40vw,35rem)]">
-      <div className="relative flex-1 w-full">
-        <div className="rounded-4xl lg:absolute lg:top-0 lg:left-0 bg-[url(/images/me.webp)] bg-cover w-full aspect-square"></div>
+    <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-8 xl:gap-10">
+      <div className="aspect-[2/3]">
+        <div className="rounded-4xl bg-[url(/images/me.webp)] bg-cover w-full h-full"></div>
       </div>
-      <div className="flex-1">
-        <p className="font-cormorant-garamond tracking-wide text-xl italic text-end">
-          PROJ.001
-        </p>
+      <div className="aspect-[2/3]">
+        <div className="rounded-4xl bg-[url(/images/me.webp)] bg-cover w-full h-full"></div>
+      </div>
+      <div className="aspect-[2/3]">
+        <div className="rounded-4xl bg-[url(/images/me.webp)] bg-cover w-full h-full"></div>
+      </div>
+      <div className="aspect-[2/3]">
+        <div className="rounded-4xl bg-[url(/images/me.webp)] bg-cover w-full h-full"></div>
+      </div>
+      {/* <div className="">
+     
         <h4 className="font-clash-display tracking-wide text-2xl py-8 italic font-light">
           BeautyCare Management App
         </h4>
@@ -31,7 +38,7 @@ const ProjectCard = () => {
             Styled Components
           </p>
         </div>
-      </div>
+        </div> */}
     </div>
   );
 };
