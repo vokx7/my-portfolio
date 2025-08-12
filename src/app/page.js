@@ -9,7 +9,6 @@ export default function Page() {
     <>
       <Main />
       <Projects />
-      {/* <About /> */}
     </>
   );
 }

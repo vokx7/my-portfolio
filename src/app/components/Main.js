@@ -5,7 +5,10 @@ import MainContainer from "./MainContainer";
 const Main = () => {
   return (
     <MainContainer>
-      <div className="flex flex-col-reverse lg:flex-row  justify-center gap-6 pb-15 lg:p-[3rem] lg:pb-[12rem]">
+      <div
+        id="main"
+        className="flex flex-col-reverse lg:flex-row  justify-center gap-6 py-15 pt-35 lg:p-[3rem] lg:py-[12rem] "
+      >
         <div className="flex-1 px-8 lg:px-0 md:flex md:flex-col md:justify-between md:pb-10">
           <div>
             <h1 className="font-clash-display font-bold text-6xl lg:text-9xl my-6 text-pink-950 tracking-wide">
