@@ -17,3 +17,8 @@
   --color-myblack: #212121;
   --color-primary: oklch(28.4% 0.109 3.907);
 }
+
+.coolshapes{
+  width: 100%;
+  max-height: 350px;
+}
