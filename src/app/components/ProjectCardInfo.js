@@ -9,7 +9,10 @@ const ProjectCardInfo = ({ link, image, details, title, tags }) => {
           className={`relative rounded-2xl w-full h-full bg-cover overflow-hidden bg-[url(${image})]`}
         >
           <div className="hidden lg:flex absolute inset-0 bg-black/0 transition duration-300 group-hover:bg-black/80 items-center justify-center">
-            <FlowerShape className="hidden group-hover:block absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2" />
+            <FlowerShape
+              color="#F6F5F1"
+              className="hidden group-hover:block absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2"
+            />
             <p className="relative hidden group-hover:block text-center z-50 max-w-[60%] text-primary font-medium italic font-cormorant-garamond tracking-wide">
               {details}
             </p>

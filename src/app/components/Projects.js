@@ -6,10 +6,9 @@ const Projects = () => {
       <div className="max-w-[120rem] m-auto px-6 lg:px-12 ">
         <div className="py-25 font-clash-display text-6xl md:text-9xl text-beige">
           <h2>
-            selection <br /> of projects
+            selection <br /> of projects{" "}
           </h2>
         </div>
-
         <ProjectCard />
       </div>
     </div>

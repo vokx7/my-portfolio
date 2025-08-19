@@ -1,23 +1,26 @@
+"use client";
+import Form from "./Form";
+
 const Contact = () => {
   return (
-    <div id="contact" className=" pb-24">
-      {/* <div className="max-w-[100rem] m-auto px-6 lg:px-12 ">
-        <div className="py-25 font-clash-display text-4xl">
-          <h2>
-            contact <br /> with me
-          </h2>
+    <div className="max-w-[80rem] m-auto px-12 text-primary py-34">
+      <h1 className="font-clash-display font-semibold text-7xl md:text-9xl text-center pb-10">
+        <span className="uppercase">let&apos;s </span>get <br /> in{" "}
+        <span className="uppercase italic underline">touch</span>
+      </h1>
+      <div className="flex flex-row pb-10">
+        <div className="md:flex-1"></div>
+        <div className="md:flex-1">
+          {" "}
+          <h4 className="max-w-[75%]">
+            Whether you have a clear vision or just a spark of an idea, I&apos;m
+            here to help you bring it to life. Let&apos;s make something
+            amazing. Or if you&apos;re looking to start a conversation about
+            future opportunities, my inbox is open - let&apos;s talk!
+          </h4>
         </div>
-        <div className="flex flex-col md:flex-row">
-          <div className="flex-1">
-            <h4>
-              Whether you have a clear vision or just a spark of an idea,
-              I&apos;m here to help you bring it to life. Let&apos;s make
-              something amazing.
-            </h4>
-          </div>
-          <div className="flex-1"></div>
-        </div>
-      </div> */}
+      </div>
+      <Form />
     </div>
   );
 };

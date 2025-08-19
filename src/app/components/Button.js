@@ -1,6 +1,6 @@
 import { useMemo } from "react";
 
-const Button = ({ children, variant = "primary", text }) => {
+const Button = ({ children, variant = "primary", text, type }) => {
   const primaryClasses = "border-pink-950 bg-transparent hover:bg-red-100";
 
   const outlinedClasses =
@@ -18,6 +18,7 @@ const Button = ({ children, variant = "primary", text }) => {
   return (
     <button
       className={`h-12 rounded-4xl border-2 px-12 text-center ${selectedClasses}`}
+      type={type}
     >
       <span className={text}>{children}</span>
     </button>

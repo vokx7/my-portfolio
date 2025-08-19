@@ -12,10 +12,10 @@ export const NavElements = ({ className, onClick }) => {
       <Link href="/#projects" className={className} onClick={onClick}>
         projects
       </Link>
-      <Link href="/#about" className={className} onClick={onClick}>
+      <Link href="/about" className={className} onClick={onClick}>
         about
       </Link>
-      <Link href="/#contact" className={className} onClick={onClick}>
+      <Link href="/contact" className={className} onClick={onClick}>
         contact
       </Link>
     </>
