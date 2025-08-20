@@ -1,6 +1,6 @@
-import Main from "./components/Main";
+import Main from "../components/Main";
 
-import Projects from "./components/Projects";
+import Projects from "../components/Projects";
 
 export default function Page() {
   return (

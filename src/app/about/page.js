@@ -1,9 +1,9 @@
-import Contact from "../../components/Contact";
+import About from "../../components/About";
 
 export default function Page() {
   return (
     <>
-      <Contact />
+      <About />
     </>
   );
 }

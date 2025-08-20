@@ -6,7 +6,7 @@
   font-style: normal;
   font-weight: 300 700;
   font-display: swap;
-  src: url("./fonts/ClashDisplay-Variable.woff2") format("woff2");
+  src: url("../fonts/ClashDisplay-Variable.woff2") format("woff2");
 }
 
 @theme {
