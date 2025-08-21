@@ -95,7 +95,9 @@ const Form = () => {
       />
 
       <div className="pt-10 text-center">
-        <Button type="submit">Submit</Button>
+        <Button as="button" type="submit">
+          Submit
+        </Button>
       </div>
       {success && (
         <p className="mt-8 p-3 text-2xl text-center font-bold underline">

@@ -25,13 +25,15 @@ const Main = () => {
               responsiveness. Want to create something unique? Get in touch,
               I&apos;d be happy to help.
             </p>
-            <Button text="text-pink-950">Contact me</Button>
+            <Button as="link" href="/contact" text="text-pink-950">
+              Contact me
+            </Button>
           </div>
         </div>
 
         <div className="flex-1 m-auto flex flex-row justify-center px-4 lg:px-0 w-3/4">
           <Image
-            src="/images/me.webp"
+            src="/images/flower-pink.jpg"
             width={600}
             height={800}
             alt="Image of the author of the website"

@@ -58,11 +58,18 @@ const Footer = () => {
               get in touch
             </h4>
             <h3 className="font-clash-display text-4xl">
-              Whether you have a clear vision or just a spark of an idea,
-              I&apos;m here to help you bring it to life. Let&apos;s make
-              something amazing!
+              I&apos;d love to hear about your project. Let&apos;s build
+              something unique together.
+              {/* I&apos;m always excited to work on projects that blend design and
+              technology. Tell me your story, and let&apos;s start building. */}
             </h3>
-            <Button variant="outlined">Email me</Button>
+            <Button
+              as="a"
+              href="mailto:pawlak-weronika@outlook.com"
+              variant="outlined"
+            >
+              Email me
+            </Button>
           </div>
         </div>
         <div className="text-center md:text-end text-sm text-beige py-10 md:px-4 lg:px-14">
