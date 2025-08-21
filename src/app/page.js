@@ -1,11 +1,10 @@
-import Main from "../components/Main";
-
-import Projects from "../components/Projects";
+import Landing from "@/components/Landing";
+import Projects from "@/components/project/Projects";
 
 export default function Page() {
   return (
     <>
-      <Main />
+      <Landing />
       <Projects />
     </>
   );

@@ -1,8 +1,8 @@
 import ProjectCardInfo from "./ProjectCardInfo";
-import Flower1 from "../../public/images/flower-dark.jpg";
-import Flower2 from "../../public/images/fruit.webp";
-import Flower3 from "../../public/images/flower-pink.jpg";
-import Flower4 from "../../public/images/flowers-white.jpg";
+import Flower1 from "../../../public/images/flower-dark.jpg";
+import Flower2 from "../../../public/images/fruit.webp";
+import Flower3 from "../../../public/images/flower-pink.jpg";
+import Flower4 from "../../../public/images/flowers-white.jpg";
 
 const ProjectCard = () => {
   return (

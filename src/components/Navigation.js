@@ -1,6 +1,6 @@
 "use client";
 import Link from "next/link";
-import MainContainer from "./MainContainer";
+import MainContainer from "./common/MainContainer";
 import { useEffect, useState } from "react";
 
 export const NavElements = ({ className, onClick }) => {

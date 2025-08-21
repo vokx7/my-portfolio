@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { NavElements } from "./Navigation";
-import MainContainer from "./MainContainer";
-import Button from "./Button";
+import MainContainer from "./common/MainContainer";
+import Button from "./common/Button";
 
 const Footer = () => {
   return (

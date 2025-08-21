@@ -1,6 +1,6 @@
 import Image from "next/image";
-import FlowerShape from "./FlowerShape";
 import ProjectCardInfoTech from "./ProjectCardInfoTech";
+import FlowerShape from "../common/FlowerShape";
 
 const ProjectCardInfo = ({ link, image, details, title, tags }) => {
   return (

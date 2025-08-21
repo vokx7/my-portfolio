@@ -1,6 +1,6 @@
 import { useState } from "react";
-import { useForm } from "../hooks/useForm";
-import Button from "./Button";
+import { useForm } from "../../hooks/useForm";
+import Button from "../common/Button";
 import FormField from "./FormField";
 import FormTextarea from "./FormTextarea";
 

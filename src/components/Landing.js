@@ -1,8 +1,7 @@
 import Image from "next/image";
-import Button from "./Button";
-import MainContainer from "./MainContainer";
-// import profile from "./images/me.webp";
-const Main = () => {
+import Button from "./common/Button";
+import MainContainer from "./common/MainContainer";
+const Landing = () => {
   return (
     <MainContainer>
       <div
@@ -44,4 +43,4 @@ const Main = () => {
   );
 };
 
-export default Main;
+export default Landing;

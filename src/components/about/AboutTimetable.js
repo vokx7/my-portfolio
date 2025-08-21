@@ -2,7 +2,7 @@ import AboutTimetableRecord from "./AboutTimetableRecord";
 
 const AboutTimetable = ({ title, records }) => {
   return (
-    <div className="flex flex-row">
+    <div className="flex flex-col md:flex-row">
       <div className="flex-1">
         <h5 className="text-xl">{title}</h5>
       </div>
