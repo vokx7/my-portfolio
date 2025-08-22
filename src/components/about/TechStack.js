@@ -1,12 +1,13 @@
-import ProjectCardInfoTech from "../project/ProjectCardInfoTech";
 import TechStackBox from "./TechStackBox";
 
 const TechStack = () => {
   return (
-    <div className="">
-      <h2 className="font-clash-display text-7xl md:text-8xl font-medium text-center tracking-wide">
-        tech stack
-      </h2>
+    <div className="h-screen flex flex-col items-center justify-center gap-8">
+      <div>
+        <h2 className="font-clash-display text-7xl md:text-9xl font-medium text-center tracking-wide">
+          tech stack
+        </h2>
+      </div>
       <div className="grid md:grid-cols-2 xl:grid-cols-4 gap-8 py-16 md:px-6 mx-auto max-w-[110rem]">
         <TechStackBox
           title="frontend development"
