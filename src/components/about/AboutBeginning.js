@@ -30,6 +30,24 @@ const AboutBeginning = () => {
     },
   ];
 
+  const certyfiactesRecords = [
+    {
+      place: "React/TypeScript",
+      desc: "Frontowcy Course",
+      year: "2025",
+    },
+    {
+      place: "Complete JavaScript Programming Course [2025]",
+      desc: "Udemy",
+      year: "03.2025",
+    },
+    {
+      place: "Google UX Design Certificate",
+      desc: "Google",
+      year: "11.2022",
+    },
+  ];
+
   return (
     <MainContainer>
       <div className="flex flex-col-reverse md:flex-row items-center pb-8">
@@ -56,11 +74,8 @@ const AboutBeginning = () => {
                 fun fact
               </h3>
               <p className=" md:max-w-[80%]">
-                I&apos;ve always had top grades in humanities (90% on the
-                extended Polish exam in my high school final exam). Don&apos;t
-                ask about math and physics, but I&apos;m interested in WebGL.
-                UI/UX isn&apos;t enough for me. It&apos;s cute but I need to
-                code.
+                I love the process of designing apps, but writing code is where
+                I feel truly fulfilled.
               </p>
             </div>
           </div>
@@ -77,6 +92,7 @@ const AboutBeginning = () => {
       <div className="py-8">
         <AboutTimetable title="Experience" records={experienceRecords} />
         <AboutTimetable title="Education" records={educationRecords} />
+        <AboutTimetable title="Certificates" records={certyfiactesRecords} />
       </div>
     </MainContainer>
   );

@@ -29,7 +29,10 @@ const ProjectCardInfo = ({ link, image, details, title, tags }) => {
         <h4 className="tracking-wide text-xl py-4 lg:group-hover:font-medium">
           {title}
         </h4>
-        <ProjectCardInfoTech tags={tags} />
+        <ProjectCardInfoTech
+          tags={tags}
+          className="text-sm font-light border-beige text-beige group-hover:text-red-100 group-hover:border-red-100"
+        />
       </div>
     </div>
   );
