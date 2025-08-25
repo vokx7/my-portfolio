@@ -16,7 +16,7 @@ const Landing = () => {
           </div>
           <div>
             <p className="mb-6 lg:mb-10 text-lg lg:text-xl text-pink-950 md:max-w-xl">
-              Hi! I&apos;m Weronika Pawlak, and I have 3 years of experience
+              Hi! I&apos;m Weronika Pawlak, and I have 2 years of experience
               building modern websites and web applications. As a front-end
               developer with a passion for design, I combine aesthetics with
               code, so your brand has a stylish and functional online presence.

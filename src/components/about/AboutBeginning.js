@@ -8,7 +8,7 @@ const AboutBeginning = () => {
     {
       place: "Freelance",
       desc: "Developing responsive web applications using React (commercial projects and private portfolio development).",
-      year: "2022 - now",
+      year: "2023 - now",
     },
     {
       place: "Frontend Developer - SYMA GROUP",
