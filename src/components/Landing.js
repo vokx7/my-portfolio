@@ -29,7 +29,7 @@ const Landing = () => {
     <MainContainer>
       <section
         id="main"
-        className="relative flex flex-col-reverse lg:flex-row  justify-center gap-6 py-15 pt-35 lg:p-[3rem] lg:py-[12rem] "
+        className="relative flex flex-col-reverse lg:flex-row  justify-center gap-6 py-15 pt-35 lg:p-[3rem] lg:py-[8rem] 2xl:py-[12rem] "
       >
         <div className="flex-1 px-8 lg:px-0 md:flex md:flex-col md:justify-between md:pb-10">
           <div>
