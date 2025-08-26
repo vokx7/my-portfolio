@@ -113,16 +113,20 @@ const Navigation = () => {
   const pathname = usePathname();
 
   useEffect(() => {
-    const reversedSection = document.querySelector(`[data-color="reversed"]`);
-    if (!reversedSection) return;
+    const reversedSections = Array.from(
+      document.querySelectorAll(`[data-color="reversed"]`)
+    );
+    if (reversedSections.length === 0) return;
 
     const handleScroll = () => {
       const navHeight = navRef.current.offsetHeight / 2;
 
-      const entryY = reversedSection.getBoundingClientRect().top;
-      const exitY = reversedSection.getBoundingClientRect().bottom;
+      const anyReversedVisible = reversedSections.some((section) => {
+        const { top, bottom } = section.getBoundingClientRect();
+        return top <= navHeight && bottom > navHeight;
+      });
 
-      setIsReversedColor(entryY <= navHeight && exitY > navHeight);
+      setIsReversedColor(anyReversedVisible);
     };
 
     handleScroll();

@@ -5,7 +5,7 @@ import Button from "./common/Button";
 
 const Footer = () => {
   return (
-    <footer className="bg-stone-800">
+    <footer data-color="reversed" className="bg-stone-800">
       <div className="py-14 lg:py-24 text-center">
         <Link
           href="/#main"
