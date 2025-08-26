@@ -22,3 +22,7 @@
   width: 100%;
   max-height: 350px;
 }
+
+ html {
+    scroll-behavior: smooth;
+  }

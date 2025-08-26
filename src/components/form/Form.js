@@ -1,10 +1,13 @@
-import { useState } from "react";
+import { useRef, useState } from "react";
 import { useForm } from "../../hooks/useForm";
 import Button from "../common/Button";
 import FormField from "./FormField";
 import FormTextarea from "./FormTextarea";
+import emailjs from "@emailjs/browser";
 
 const Form = () => {
+  const form = useRef();
+
   const [formState, setFormState, handleChange] = useForm({
     name: "",
     email: "",
@@ -54,6 +57,24 @@ const Form = () => {
     setSuccess(isSuccess);
 
     if (isSuccess) {
+      emailjs
+        .sendForm(
+          process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID,
+          process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID,
+          form.current,
+          {
+            publicKey: process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY,
+          }
+        )
+        .then(
+          () => {
+            console.log("SUCCESS!");
+          },
+          (error) => {
+            console.log("FAILED...", error);
+          }
+        );
+
       setFormState({
         name: "",
         email: "",
@@ -64,10 +85,18 @@ const Form = () => {
     console.log(`Name: ${name}`);
     console.log(`Email: ${email}`);
     console.log(`Message: ${message}`);
+    console.log(
+      process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID,
+      process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID,
+      form.current,
+      {
+        publicKey: process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY,
+      }
+    );
   };
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form ref={form} onSubmit={handleSubmit}>
       <div className="flex flex-col md:flex-row gap-8 md:gap-10 pb-8">
         <FormField
           type="text"

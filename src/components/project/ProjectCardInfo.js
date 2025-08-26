@@ -25,13 +25,13 @@ const ProjectCardInfo = ({ link, image, details, title, tags }) => {
           </div>
         </div>
       </a>
-      <div className="pt-2 py-4 lg:group-hover:px-6">
-        <h4 className="tracking-wide text-xl py-4 lg:group-hover:font-medium">
+      <div className="pt-2 py-4 lg:px-4 lg:group-hover:px-6 transition-all duration-300 ease-in-out">
+        <h4 className="tracking-wide text-xl py-4 lg:group-hover:font-medium transition-all duration-300 ease-in-out">
           {title}
         </h4>
         <ProjectCardInfoTech
           tags={tags}
-          className="text-sm font-light border-beige text-beige group-hover:text-red-100 group-hover:border-red-100"
+          className="text-sm font-light border-beige text-beige group-hover:text-red-100 group-hover:border-red-100 transition-colors duration-300 ease-in-out"
         />
       </div>
     </div>

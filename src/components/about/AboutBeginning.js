@@ -49,7 +49,7 @@ const AboutBeginning = () => {
   ];
 
   return (
-    <MainContainer className="h-screen">
+    <MainContainer className="lg:h-screen lg:py-0 py-10">
       <div className="flex flex-col-reverse md:flex-row items-center pb-8">
         <div className="flex flex-col justify-between flex-1">
           <div>

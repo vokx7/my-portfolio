@@ -24,10 +24,10 @@ const ProjectCard = () => {
           "React",
           "TypeScript",
           "React Context",
-          "localStorage",
           "React Router",
-          "Multi-Page Application",
           "CSS",
+          "localStorage",
+          "Multi-Page Application",
         ]}
       />{" "}
       <ProjectCardInfo

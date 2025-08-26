@@ -8,8 +8,8 @@ const Footer = () => {
     <footer className="bg-stone-800">
       <div className="py-14 lg:py-24 text-center">
         <Link
-          href="/"
-          className="font-clash-display text-6xl lg:text-9xl tracking-wide text-beige "
+          href="/#main"
+          className="font-clash-display text-6xl lg:text-9xl tracking-wide text-beige hover:bg-clip-text hover:text-transparent hover:bg-gradient-to-r hover:from-pink-100 hover:to-red-100 hover:scale-105 transition-all duration-300"
         >
           w. pawlak
         </Link>
@@ -17,11 +17,11 @@ const Footer = () => {
       <hr className="text-beige w-full" />
       <MainContainer>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-beige m-14 ">
-          <div className="flex flex-col gap-4">
+          <div className="flex flex-col items-start gap-4">
             <h4 className="text-xl font-semibold tracking-wide py-6 text-red-100">
               sitemap
             </h4>
-            <NavElements className={""} />
+            <NavElements className="relative after:absolute after:bottom-0 after:left-1/2 after:w-0 after:h-[1px] after:bg-red-100 hover:text-red-100 after:transition-all after:duration-300 after:ease-in-out hover:after:left-0 hover:after:w-full" />
           </div>
           <div className="flex flex-col gap-4">
             <h4 className="text-xl font-semibold tracking-wide py-6 text-red-100">
@@ -32,13 +32,17 @@ const Footer = () => {
                 <a
                   href="mailto:pawlak-weronika@outlook.com"
                   target="_blank"
-                  className=""
+                  className="relative after:absolute after:bottom-0 after:left-1/2 after:w-0 after:h-[1px] after:bg-red-100 hover:text-red-100 after:transition-all after:duration-300 after:ease-in-out hover:after:left-0 hover:after:w-full"
                 >
                   Email
                 </a>
               </li>
               <li>
-                <a href="https://github.com/vokx7" target="_blank" className="">
+                <a
+                  href="https://github.com/vokx7"
+                  target="_blank"
+                  className="relative after:absolute after:bottom-0 after:left-1/2 after:w-0 after:h-[1px] after:bg-red-100 hover:text-red-100 after:transition-all after:duration-300 after:ease-in-out hover:after:left-0 hover:after:w-full"
+                >
                   GitHub
                 </a>
               </li>
@@ -46,7 +50,7 @@ const Footer = () => {
                 <a
                   href="https://www.linkedin.com/in/weronika-pawlak-605596256/"
                   target="_blank"
-                  className=""
+                  className="relative after:absolute after:bottom-0 after:left-1/2 after:w-0 after:h-[1px] after:bg-red-100 hover:text-red-100 after:transition-all after:duration-300 after:ease-in-out hover:after:left-0 hover:after:w-full"
                 >
                   LinkedIn
                 </a>
