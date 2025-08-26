@@ -1,7 +1,7 @@
 "use client";
 import Link from "next/link";
 import MainContainer from "./common/MainContainer";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 
 export const NavElements = ({ className, onClick }) => {
@@ -28,7 +28,7 @@ export const NavElements = ({ className, onClick }) => {
   );
 };
 
-const Nav = ({ isMainVisible }) => {
+const Nav = ({ ref, isReversedColor }) => {
   const [isNavOpen, setIsNavOpen] = useState(false);
 
   useEffect(() => {
@@ -39,13 +39,16 @@ const Nav = ({ isMainVisible }) => {
     }
   }, [isNavOpen]);
   return (
-    <nav className="text-2xl fixed top-0 right-0 px-10 py-4 my-10 z-50">
-      <div className="space-y-2" onClick={() => setIsNavOpen((prev) => !prev)}>
+    <nav ref={ref} className="text-2xl fixed top-0 right-0 px-10 py-14 z-50">
+      <div
+        className="space-y-2 cursor-pointer"
+        onClick={() => setIsNavOpen((prev) => !prev)}
+      >
         {[0, 1, 2].map((i) => (
           <motion.span
             key={i}
             className={`block h-0.5 w-8 ${
-              isMainVisible ? "bg-primary" : "bg-beige"
+              isReversedColor ? "bg-beige" : "bg-primary"
             }`}
             animate={
               isNavOpen
@@ -102,39 +105,46 @@ const Nav = ({ isMainVisible }) => {
   );
 };
 
+import { usePathname } from "next/navigation";
+
 const Navigation = () => {
-  const [isMainVisible, setIsMainVisible] = useState(true);
+  const navRef = useRef();
+  const [isReversedColor, setIsReversedColor] = useState(false);
+  const pathname = usePathname();
 
   useEffect(() => {
-    const mainSection = document.querySelector("#main");
-    if (!mainSection) return;
+    const reversedSection = document.querySelector(`[data-color="reversed"]`);
+    if (!reversedSection) return;
 
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        setIsMainVisible(entry.isIntersecting);
-      },
-      { rootMargin: "-64px" }
-    );
+    const handleScroll = () => {
+      const navHeight = navRef.current.offsetHeight / 2;
 
-    observer.observe(mainSection);
+      const entryY = reversedSection.getBoundingClientRect().top;
+      const exitY = reversedSection.getBoundingClientRect().bottom;
 
-    return () => observer.disconnect();
-  }, []);
+      setIsReversedColor(entryY <= navHeight && exitY > navHeight);
+    };
+
+    handleScroll();
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [pathname]);
 
   return (
     <MainContainer>
-      <div className="flex flex-row items-center justify-between  ">
+      <div className="flex flex-row items-center justify-between">
         <div className="fixed top-0 left-0 px-10 py-4 my-10 z-40">
           <Link
             href="/"
             className={`font-clash-display text-2xl tracking-wide ${
-              isMainVisible ? "text-primary" : "text-beige"
+              isReversedColor ? "text-beige" : "text-primary"
             }`}
           >
             w. pawlak
           </Link>
         </div>
-        <Nav isMainVisible={isMainVisible} />
+        <Nav ref={navRef} isReversedColor={isReversedColor} />
       </div>
     </MainContainer>
   );

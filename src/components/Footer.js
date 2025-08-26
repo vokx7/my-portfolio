@@ -9,7 +9,7 @@ const Footer = () => {
       <div className="py-14 lg:py-24 text-center">
         <Link
           href="/#main"
-          className="font-clash-display text-6xl lg:text-9xl tracking-wide text-beige hover:bg-clip-text hover:text-transparent hover:bg-gradient-to-r hover:from-pink-100 hover:to-red-100 hover:scale-105 transition-all duration-300"
+          className="font-clash-display text-6xl lg:text-9xl tracking-wide bg-beige bg-clip-text text-transparent hover:bg-gradient-to-r hover:from-pink-100 hover:to-red-100 hover:scale-105 transition-all duration-300"
         >
           w. pawlak
         </Link>

@@ -2,12 +2,16 @@
 import Image from "next/image";
 import Button from "./common/Button";
 import MainContainer from "./common/MainContainer";
+import Flower from "../../public/images/flower-pink.jpg";
+
 import { motion } from "motion/react";
 
-const Landing = ({ projectsRef }) => {
+const Landing = () => {
   const scrollToProjects = () => {
-    projectsRef.current?.scrollIntoView({ behavior: "smooth" });
+    const projects = document.getElementById("projects");
+    projects.scrollIntoView({ behavior: "smooth" });
   };
+
   const container = {
     hidden: { opacity: 0 },
     show: {
@@ -62,10 +66,11 @@ const Landing = ({ projectsRef }) => {
         <div className="flex-1 m-auto flex flex-row justify-center px-4 lg:px-0 w-3/4">
           {" "}
           <Image
-            src="/images/flower-pink.jpg"
-            width={600}
+            src={Flower}
+            width="auto"
             height={800}
             alt="Image of the author of the website"
+            priority={1}
           />
         </div>
         <motion.button
