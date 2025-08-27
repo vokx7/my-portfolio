@@ -2,7 +2,7 @@ import TechStackBox from "./TechStackBox";
 
 const TechStack = () => {
   return (
-    <div className=" flex flex-col items-center justify-center lg:gap-8">
+    <div className=" flex flex-col items-center justify-center xl:gap-8 ">
       <div>
         <h2 className="font-clash-display text-7xl lg::text-9xl font-medium text-center tracking-wide">
           tech stack
