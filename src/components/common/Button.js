@@ -2,17 +2,16 @@ import Link from "next/link";
 import { useMemo } from "react";
 
 const Button = ({
+  className,
   children,
   variant = "primary",
-  text,
-  type,
+  onClick,
   as = "link",
   href = "",
 }) => {
-  const primaryClasses = "border-pink-950 bg-transparent hover:bg-red-100";
+  const primaryClasses = "bg-cta text-secondary-dark";
 
-  const outlinedClasses =
-    "border-red-100 bg-transparent hover:bg-red-100 hover:text-myblack";
+  const outlinedClasses = "bg-hover";
 
   const selectedClasses = useMemo(() => {
     switch (variant) {
@@ -27,27 +26,29 @@ const Button = ({
     return (
       <Link
         href={href}
-        className={`inline-flex items-center h-12 rounded-4xl border-2 px-12 text-center ${selectedClasses}`}
+        className={`inline-flex items-center h-12 rounded-4xl px-12 text-center gap-4 font-medium hover:font-bold ${selectedClasses} ${className}`}
       >
-        <span className={text}>{children}</span>
+        {children}
       </Link>
     );
   if (as === "a")
     return (
       <a
         href={href}
-        className={`inline-flex items-center h-12 rounded-4xl border-2 px-12 text-center ${selectedClasses}`}
+        className={`inline-flex items-center h-12 rounded-4xl px-12 text-center gap-4 font-medium hover:font-bold ${selectedClasses} ${className}`}
       >
-        <span className={text}>{children}</span>
+        {children}
       </a>
     );
 
   return (
     <button
-      className={`h-12 rounded-4xl border-2 px-12 text-center ${selectedClasses} cursor-pointer`}
-      type={type}
+      as="button"
+      type="button"
+      onClick={onClick}
+      className={`inline-flex items-center h-8 rounded-4xl px-6 text-center gap-4 font-medium hover:font-bold ${selectedClasses} ${className} cursor-pointer `}
     >
-      <span className={text}>{children}</span>
+      {children}
     </button>
   );
 };

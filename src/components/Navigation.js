@@ -10,6 +10,7 @@ export const NavElements = ({ className, onClick }) => {
     { href: "/#projects", label: "projects" },
     { href: "/about", label: "about" },
     { href: "/contact", label: "contact" },
+    { href: "/blog", label: "blog" },
   ];
 
   return (
@@ -48,15 +49,15 @@ const Nav = ({ ref, isReversedColor }) => {
           <motion.span
             key={i}
             className={`block h-0.5 w-8 ${
-              isReversedColor ? "bg-beige" : "bg-primary"
+              isReversedColor ? "bg-primary-dark" : "bg-main-text-dark"
             }`}
             animate={
               isNavOpen
                 ? i === 0
                   ? { rotate: 45, y: 7 }
                   : i === 1
-                  ? { opacity: 0 }
-                  : { rotate: -45, y: -7 }
+                    ? { opacity: 0 }
+                    : { rotate: -45, y: -7 }
                 : { rotate: 0, y: 0, opacity: 1 }
             }
             transition={{ duration: 0.3, ease: "easeInOut" }}
@@ -72,7 +73,7 @@ const Nav = ({ ref, isReversedColor }) => {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.3 }}
-            className="fixed top-0 left-0 w-full h-screen z-50 bg-white/80 backdrop-blur-lg flex flex-col items-center justify-center gap-10"
+            className="fixed top-0 left-0 w-full h-screen z-50 bg-primary-dark/80 backdrop-blur-lg flex flex-col items-center justify-center gap-10"
           >
             <motion.div
               onClick={() => setIsNavOpen(false)}
@@ -82,7 +83,7 @@ const Nav = ({ ref, isReversedColor }) => {
               transition={{ duration: 0.3 }}
             >
               <svg
-                className="h-18 w-18 text-primary cursor-pointer"
+                className="h-18 w-18 text-main-text-dark cursor-pointer"
                 viewBox="0 0 24 24"
                 fill="none"
                 stroke="currentColor"
@@ -96,7 +97,7 @@ const Nav = ({ ref, isReversedColor }) => {
             </motion.div>
             <NavElements
               onClick={() => setIsNavOpen(false)}
-              className="text-6xl md:text-8xl xl:text-9xl text-primary font-clash-display font-medium tracking-wide relative after:absolute after:bottom-0 after:left-1/2 after:w-0 after:h-[4px] after:bg-primary after:transition-all after:duration-300 after:ease-in-out hover:after:left-0 hover:after:w-full"
+              className="text-6xl md:text-8xl xl:text-7xl 2xl:text-9xl text-main-text-dark font-clash-display font-medium tracking-wide relative after:absolute after:bottom-0 after:left-1/2 after:w-0 after:h-[4px] after:bg-main-text-dark after:transition-all after:duration-300 after:ease-in-out hover:after:left-0 hover:after:w-full"
             />
           </motion.div>
         )}
@@ -142,7 +143,7 @@ const Navigation = () => {
           <Link
             href="/"
             className={`font-clash-display text-2xl tracking-wide ${
-              isReversedColor ? "text-beige" : "text-primary"
+              isReversedColor ? "text-primary-dark" : "text-main-text-dark"
             }`}
           >
             w. pawlak

@@ -6,13 +6,13 @@ import Flower4 from "../../../public/images/flowers-white.jpg";
 
 const ProjectCard = () => {
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-8 xl:gap-10 text-beige">
+    <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-8 xl:gap-10 text-main-text-dark">
       <ProjectCardInfo
         link="https://github.com/vokx7/beautycare-management-app"
         image={Flower1}
         details="A web application that allows you to manage a company in the beauty industry."
         title="BeautyCare Management App"
-        tags={["Vite", "React", "Tailwind CSS", "Next.js"]}
+        tags={["Vite", "React", "Next.js", "Tailwind CSS"]}
       />
       <ProjectCardInfo
         link="https://github.com/vokx7/online-store-client"
@@ -20,13 +20,10 @@ const ProjectCard = () => {
         details="A simplified version of the online store client."
         title="Online Store Client"
         tags={[
-          "Vite",
           "React",
           "TypeScript",
-          "React Context",
+          "Context",
           "React Router",
-          "CSS",
-          "localStorage",
           "Multi-Page Application",
         ]}
       />{" "}

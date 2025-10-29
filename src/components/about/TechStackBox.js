@@ -13,7 +13,7 @@ const TechStackBox = ({ title, description, tags }) => {
 
         <ProjectCardInfoTech
           tags={tags}
-          className="border-primary text-primary  group-hover:text-beige group-hover:border-beige"
+          className="border-main-text-dark text-main-text-dark  group-hover:text-beige group-hover:border-beige"
         />
       </div>
     </div>

@@ -15,7 +15,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className={manrope.className}>
-      <body className="bg-beige">
+      <body className="bg-primary-dark">
         <Navigation />
         {children}
         <Footer />
