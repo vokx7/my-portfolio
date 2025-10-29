@@ -11,7 +11,7 @@ const Button = ({
 }) => {
   const primaryClasses = "bg-cta text-secondary-dark";
 
-  const outlinedClasses = "bg-hover";
+  const outlinedClasses = "bg-hover text-secondary-dark";
 
   const selectedClasses = useMemo(() => {
     switch (variant) {

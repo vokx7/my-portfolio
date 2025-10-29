@@ -7,11 +7,13 @@ import LandingPhoto from "../../public/images/flowers.jpg";
 import { motion } from "motion/react";
 import { AnimateIcon } from "./animate-ui/icons/icon";
 import { MoveRight } from "./animate-ui/icons/move-right";
-import { useState } from "react";
+import { useRef, useState } from "react";
 import WindowAlert from "./common/WindowAlert";
 import SeeProjectsButton from "./common/SeeProjectsButton";
 
 const Landing = () => {
+  const constraintsRef = useRef(null);
+
   const [dogImages, setDogImages] = useState([]);
 
   const generateImage = async () => {
@@ -61,7 +63,10 @@ const Landing = () => {
       className="relative flex flex-col lg:flex-row justify-center gap-6 min-h-screen mt-26 lg:mt-0"
     >
       <MainContainer>
-        <div className="px-8 lg:px-0 md:flex md:flex-col md:justify-between md:pb-10">
+        <div
+          ref={constraintsRef}
+          className="relative px-8 lg:px-0 md:flex md:flex-col md:justify-between md:pb-10"
+        >
           <div>
             <motion.h1
               className="font-clash-display font-bold text-6xl xl:text-8xl 2xl:text-9xl my-10 text-main-text-dark tracking-wide"
@@ -103,6 +108,18 @@ const Landing = () => {
             </motion.div>
           </motion.div>
         </div>
+        <motion.div
+          drag
+          dragConstraints={constraintsRef}
+          dragElastic={0.2}
+          className="flower absolute bottom-70 bg-hover"
+        />
+        <motion.div
+          drag
+          dragConstraints={constraintsRef}
+          dragElastic={0.2}
+          className="flower absolute top-70 left-90 bg-cta"
+        />
       </MainContainer>
       <div className="relative w-full lg:w-1/3 h-[80vh] lg:h-auto">
         <Image
