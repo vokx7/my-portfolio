@@ -1,6 +1,7 @@
+import { Orbit } from "../animate-ui/icons/orbit";
 import Button from "./Button";
 
-const WindowAlert = ({ onClick }) => {
+const WindowAlert = ({ onClick, loading }) => {
   return (
     <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 flex flex-col gap-5 w-60 h-40 bg-secondary-dark rounded-xl z-10">
       <div className="bg-primary-dark h-5 w-full flex items-center rounded-t-xl px-1">
@@ -20,8 +21,13 @@ const WindowAlert = ({ onClick }) => {
         <p className="text-main-text-dark tracking-wide">
           Would you like to spawn a Yorkie?
         </p>
-        <Button as="button" onClick={onClick} variant="outlined">
-          Yes!
+        <Button
+          as="button"
+          disabled={loading}
+          onClick={onClick}
+          variant="outlined"
+        >
+          {loading ? <Orbit animateOnView /> : "Yes!"}
         </Button>
       </div>
     </div>

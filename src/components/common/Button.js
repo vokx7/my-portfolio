@@ -2,6 +2,7 @@ import Link from "next/link";
 import { useMemo } from "react";
 
 const Button = ({
+  disabled,
   className,
   children,
   variant = "primary",
@@ -43,6 +44,7 @@ const Button = ({
 
   return (
     <button
+      disabled={disabled}
       as="button"
       type="button"
       onClick={onClick}

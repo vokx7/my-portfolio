@@ -10,20 +10,23 @@ import { MoveRight } from "./animate-ui/icons/move-right";
 import { useRef, useState } from "react";
 import WindowAlert from "./common/WindowAlert";
 import SeeProjectsButton from "./common/SeeProjectsButton";
+import MyFlower from "./common/MyFlower";
 
 const Landing = () => {
   const constraintsRef = useRef(null);
 
   const [dogImages, setDogImages] = useState([]);
+  const [loading, setLoading] = useState(false);
 
   const generateImage = async () => {
     try {
+      setLoading(true);
       const data = await fetch(
         "https://dog.ceo/api/breed/terrier/yorkshire/images/random"
       );
       const res = await data.json();
 
-      const top = Math.random() * 80;
+      const top = Math.random() * 100;
       const left = Math.random() * 80;
 
       const newDog = {
@@ -33,7 +36,10 @@ const Landing = () => {
         left,
       };
 
-      setDogImages((prev) => [...prev, newDog]);
+      setTimeout(() => {
+        setDogImages((prev) => [...prev, newDog]);
+        setLoading(false);
+      }, 1000);
     } catch (e) {
       console.error("Błąd podczas pobierania zdjęcia:", e);
     }
@@ -60,7 +66,7 @@ const Landing = () => {
   return (
     <section
       id="main"
-      className="relative flex flex-col lg:flex-row justify-center gap-6 min-h-screen mt-26 lg:mt-0"
+      className="flex flex-col lg:flex-row justify-center gap-6 min-h-screen mt-26 lg:mt-0"
     >
       <MainContainer>
         <div
@@ -77,6 +83,7 @@ const Landing = () => {
               soft design <br /> strong code
             </motion.h1>
           </div>
+
           <motion.div variants={container} initial="hidden" animate="show">
             <motion.p
               variants={item}
@@ -107,21 +114,33 @@ const Landing = () => {
               </AnimateIcon>
             </motion.div>
           </motion.div>
+
+          <MyFlower constraintsRef={constraintsRef} />
         </div>
-        <motion.div
+        {/* <motion.div
           drag
           dragConstraints={constraintsRef}
           dragElastic={0.2}
-          className="flower absolute bottom-70 bg-hover"
+          animate={{
+            x: [0, 80, -60, 100, -80, 0],
+            y: [0, -40, 60, -30, 50, 0],
+          }}
+          transition={{
+            duration: 8,
+            repeat: Infinity,
+            ease: "easeInOut",
+          }}
+          className="flower absolute top-0 left-0 bg-hover"
         />
         <motion.div
           drag
           dragConstraints={constraintsRef}
           dragElastic={0.2}
-          className="flower absolute top-70 left-90 bg-cta"
-        />
+          className="flower absolute top-70 left-60 bg-cta"
+        /> */}
       </MainContainer>
-      <div className="relative w-full lg:w-1/3 h-[80vh] lg:h-auto">
+
+      <div className="relative w-full lg:w-1/3 h-[80vh] lg:h-auto overflow-r-hidden">
         <Image
           src={LandingPhoto}
           alt="Image of the author of the website"
@@ -131,7 +150,7 @@ const Landing = () => {
         />
         <div className="absolute inset-0 bg-black/30" />
 
-        <WindowAlert onClick={generateImage} />
+        <WindowAlert onClick={generateImage} loading={loading} />
         {dogImages.map((dog) => (
           <div
             key={dog.id}
