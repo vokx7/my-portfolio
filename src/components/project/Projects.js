@@ -1,45 +1,67 @@
 "use client";
 
-// import { motion } from "framer-motion";
-// import Image from "next/image";
-
-import ProjectCard from "./ProjectCard";
-
-// const projects = [
-//   "/images/flower-dark.jpg",
-//   "/images/fruit.webp",
-//   "/images/flower-pink.jpg",
-//   "/images/flowers-white.jpg",
-// ];
+import ProjecBox from "./ProjectBox";
+// import BeautyCareApp from "../../public/images/beautycare2.jpeg";
 
 const Projects = () => {
   return (
     <section
       data-color="reversed"
       id="projects"
-      className="bg-secondary-dark pb-24 min-h-screen relative"
+      className="bg-primary-dark pb-24 min-h-screen relative"
     >
       <div className="max-w-[120rem] m-auto px-6 lg:px-12">
-        <h2 className="font-clash-display text-main-text-dark text-6xl md:text-8xl 2xl:text-9xl py-22">
+        <h2 className="font-clash-display text-main-text-dark text-6xl md:text-8xl py-22">
           selection <br /> of <span className="highlight">projects</span>{" "}
         </h2>
-        {/* <motion.div
-          className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-8 xl:gap-10 text-main-text-dark"
-          initial={{ opacity: 0, y: 50 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-        >
-          {projects.map((src, i) => (
-            <div
-              key={i}
-              className="relative w-full aspect-[2/3] overflow-hidden rounded-2xl shadow-lg"
-            >
-              <Image src={src} alt="" fill className="object-cover" />
-            </div>
-          ))}
-        </motion.div> */}
+        <div className="flex flex-col gap-6">
+          <div className="flex flex-col lg:flex-row gap-4 group">
+            <ProjecBox
+              title="BeautyCare Management App"
+              details="A web application that allows you to manage a company in the beauty industry."
+              tags={["Vite", "React", "Next.js", "Tailwind CSS"]}
+              image={"/images/beautycare2.jpeg"}
+              href={"https://github.com/vokx7/beautycare-management-app"}
+            />
+            <ProjecBox
+              title="Online Store Client"
+              details="A simplified version of the online store client."
+              tags={[
+                "React",
+                "TypeScript",
+                "Context",
+                "React Router",
+                "Multi-Page Application",
+              ]}
+              image={"/images/onlinestore.jpeg"}
+              href={"https://github.com/vokx7/online-store-client"}
+            />
+          </div>
 
-        <ProjectCard />
+          <div className="flex flex-col lg:flex-row gap-4 group">
+            <ProjecBox
+              title="Transporter Travel"
+              details="Modern website for a travel agency. It provides users with an intuitive and seamless experience."
+              tags={[
+                "JavaScript",
+                "React",
+                "Tailwind CSS",
+                "Next.js",
+                "SEO",
+                "Node.js",
+              ]}
+              image={"/images/transporter2.jpeg"}
+              href={"https://transporter-travel.pl/"}
+            />
+            <ProjecBox
+              title="JW Fotografia"
+              details="Professional photography portfolio website."
+              tags={["React", "JavaScript", "Next.js", "CSS", "SEO"]}
+              image={"/images/jwfotografia.jpeg"}
+              href={"https://jw-fotografia.vercel.app/"}
+            />
+          </div>
+        </div>
       </div>
     </section>
   );

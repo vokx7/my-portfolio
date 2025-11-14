@@ -61,7 +61,7 @@ const Footer = () => {
               <Button
                 as="a"
                 href="mailto:pawlak-weronika@outlook.com"
-                className={"w-54"}
+                className={"w-54 h-12 px-12"}
               >
                 Email me
                 <MoveRight />
