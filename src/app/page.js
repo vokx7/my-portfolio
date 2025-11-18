@@ -1,3 +1,4 @@
+import About from "@/components/about/About";
 import Landing from "@/components/Landing";
 import Projects from "@/components/project/Projects";
 import Services from "@/components/services/Services";
@@ -7,6 +8,7 @@ export default function Page() {
     <>
       <Landing />
       <Services />
+      <About />
       <Projects />
     </>
   );

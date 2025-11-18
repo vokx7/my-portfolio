@@ -7,8 +7,9 @@ import { AnimatePresence, motion } from "framer-motion";
 export const NavElements = ({ className, onClick }) => {
   const links = [
     { href: "/", label: "home" },
+    { href: "/#services", label: "services" },
+    { href: "/#about", label: "about" },
     { href: "/#projects", label: "projects" },
-    { href: "/about", label: "about" },
     { href: "/contact", label: "contact" },
     { href: "/blog", label: "blog" },
   ];
@@ -73,7 +74,7 @@ const Nav = ({ ref, isReversedColor }) => {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.3 }}
-            className="fixed top-0 left-0 w-full h-screen z-50 bg-primary-dark/80 backdrop-blur-lg flex flex-col items-center justify-center gap-10"
+            className="fixed top-0 left-0 w-full h-screen z-50 bg-primary-dark/80 backdrop-blur-lg flex flex-col items-center justify-center gap-8"
           >
             <motion.div
               onClick={() => setIsNavOpen(false)}

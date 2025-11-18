@@ -1,7 +1,8 @@
-"use client";
-
 import ProjecBox from "./ProjectBox";
-// import BeautyCareApp from "../../public/images/beautycare2.jpeg";
+import BeautyCare from "../../../public/images/beautycare2.jpeg";
+import OnlineStore from "../../../public/images/onlinestore.jpeg";
+import TransporterTravel from "../../../public/images/transporter2.jpeg";
+import JWFotografia from "../../../public/images/jwfotografia.jpeg";
 
 const Projects = () => {
   return (
@@ -20,7 +21,7 @@ const Projects = () => {
               title="BeautyCare Management App"
               details="A web application that allows you to manage a company in the beauty industry."
               tags={["Vite", "React", "Next.js", "Tailwind CSS"]}
-              image={"/images/beautycare2.jpeg"}
+              image={BeautyCare}
               href={"https://github.com/vokx7/beautycare-management-app"}
             />
             <ProjecBox
@@ -33,7 +34,7 @@ const Projects = () => {
                 "React Router",
                 "Multi-Page Application",
               ]}
-              image={"/images/onlinestore.jpeg"}
+              image={OnlineStore}
               href={"https://github.com/vokx7/online-store-client"}
             />
           </div>
@@ -50,14 +51,14 @@ const Projects = () => {
                 "SEO",
                 "Node.js",
               ]}
-              image={"/images/transporter2.jpeg"}
+              image={TransporterTravel}
               href={"https://transporter-travel.pl/"}
             />
             <ProjecBox
               title="JW Fotografia"
               details="Professional photography portfolio website."
               tags={["React", "JavaScript", "Next.js", "CSS", "SEO"]}
-              image={"/images/jwfotografia.jpeg"}
+              image={JWFotografia}
               href={"https://jw-fotografia.vercel.app/"}
             />
           </div>

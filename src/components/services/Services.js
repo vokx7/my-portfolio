@@ -11,7 +11,7 @@ import { HiOutlinePaintBrush } from "react-icons/hi2";
 
 const Services = () => {
   return (
-    <section className="bg-secondary-dark">
+    <section id="services" className="bg-secondary-dark">
       <MainContainer className="py-20 p-10">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 py-10">
           <div className="flex flex-col text-main-text-dark md:gap-2 xl:gap-0">
@@ -24,7 +24,7 @@ const Services = () => {
               intuitive user experiences.
             </p>
             <AnimateIcon animateOnHover>
-              <Button as="link" href="/contact" className={"w-58 bg-hover"}>
+              <Button as="link" href="/contact" className={"w-50 bg-hover"}>
                 Let&apos;s talk
                 <MoveRight />
               </Button>

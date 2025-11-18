@@ -27,7 +27,7 @@ const Button = ({
     return (
       <Link
         href={href}
-        className={`inline-flex items-center h-12 rounded-4xl px-10 text-center gap-4 font-medium hover:font-bold ${selectedClasses} ${className}`}
+        className={`inline-flex items-center h-12 rounded-4xl px-10 text-center gap-4 font-bold hover:font-bold ${selectedClasses} ${className}`}
       >
         {children}
       </Link>
