@@ -97,7 +97,7 @@ const Form = () => {
 
   return (
     <form ref={form} onSubmit={handleSubmit}>
-      <div className="flex flex-col md:flex-row gap-8 md:gap-10 pb-8">
+      <div className="flex flex-col md:flex-row gap-8 md:gap-10 pb-8 text-main-text-dark">
         <FormField
           type="text"
           name="name"
@@ -123,13 +123,13 @@ const Form = () => {
         errors={errors.message}
       />
 
-      <div className="pt-10 text-center">
-        <Button as="button" type="submit">
+      <div className="pt-10 text-center ">
+        <Button as="button" type="submit" className="bg-hover">
           Submit
         </Button>
       </div>
       {success && (
-        <p className="mt-8 p-3 text-2xl text-center font-bold underline">
+        <p className="mt-8 p-3 text-2xl text-center font-bold underline text-main-text-dark">
           Thanks for the message!
         </p>
       )}

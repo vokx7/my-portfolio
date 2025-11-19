@@ -37,7 +37,7 @@ const Button = ({
       <a
         href={href}
         target="_blank"
-        className={`inline-flex items-center rounded-4xl text-center gap-4 font-medium hover:font-bold ${selectedClasses} ${className}`}
+        className={`inline-flex items-center rounded-4xl text-center gap-4 font-bold hover:font-bold ${selectedClasses} ${className}`}
       >
         {children}
       </a>

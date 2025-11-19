@@ -1,6 +1,8 @@
 import Link from "next/link";
 import { client } from "@/sanity/client";
 import MainContainer from "@/components/common/MainContainer";
+import Image from "next/image";
+import Project from "../../../public/images/beautycare2.jpeg";
 
 const POSTS_QUERY = `*[
   _type == "post"
@@ -15,17 +17,36 @@ const IndexPage = async () => {
   return (
     <MainContainer>
       <section className="mx-auto min-h-screen py-15 pt-35 lg:p-[3rem] lg:py-[8rem] 2xl:py-[12rem]">
-        <div className="">
-          <h1 className="font-clash-display font-bold text-6xl lg:text-8xl my-6 text-pink-950 tracking-wide">
-            Blog
-          </h1>
+        <div className="flex flex-col items-center justify-center  text-hover font-clash-display  tracking-wider">
+          <h6 className="font-medium uppercase">Welcome to</h6>
+          <h1 className=" text-6xl lg:text-7xl my-6 font-semibold">my blog</h1>
+          <hr className="w-20 text-hover" />
+          <p className="text-center max-w-80 text-main-text-dark py-10 md:pb-20">
+            I share knowledge, experiences, and inspiration from the world of
+            front-end development, design, and creating modern websites.
+          </p>
         </div>
-        <ul className="flex flex-col gap-y-4">
+        <hr className="text-hover" />
+        <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
           {posts.map((post) => (
-            <li className="hover:underline" key={post._id}>
+            <li
+              className="font-clash-display text-main-text-dark hover:brightness-85 hover:bg-secondary-dark hover:rounded-b-lg"
+              key={post._id}
+            >
               <Link href={`/blog/${post.slug.current}`}>
-                <h2 className="text-xl font-semibold">{post.title}</h2>
-                <p>{new Date(post.publishedAt).toLocaleDateString()}</p>
+                <Image
+                  width={600}
+                  height={800}
+                  src={Project}
+                  alt="Image of the Project"
+                  className=""
+                />
+                <p className="my-4 px-4 text-base">
+                  {new Date(post.publishedAt).toLocaleDateString()}
+                </p>
+                <h2 className="text-2xl xl:text-3xl mb-4 tracking-wide px-4">
+                  {post.title}
+                </h2>
               </Link>
             </li>
           ))}
