@@ -1,6 +1,6 @@
 import MainContainer from "../common/MainContainer";
 import Image from "next/image";
-import Author from "../../../public/images/author-wp-square.png";
+import Author from "../../../public/images/weronika-pawlak-author.png";
 import Button from "../common/Button";
 import { AnimateIcon } from "../animate-ui/icons/icon";
 import { Download } from "../animate-ui/icons/download";
@@ -11,7 +11,17 @@ const About = () => {
   return (
     <section id="about" className="pb-20 bg-secondary-dark">
       <MainContainer>
-        <div className="flex flex-col-reverse lg:flex-row  items-center justify-center mx-10 p-16 rounded-xl bg-primary-dark">
+        <div className="relative flex flex-col-reverse lg:flex-row items-center justify-center mx-10 p-16 rounded-xl bg-primary-dark gap-30 xl:gap-20">
+          <div className="absolute bottom-0 lg:left-0 xl:left-10 2xl:left-20 ">
+            <Image
+              width={450}
+              height={750}
+              src={Author}
+              alt="Image of the author of the website"
+              className="brightness-90 w-100 xl:w-120"
+            />
+          </div>
+          <div className="lg:flex-1/3 lg:h-0 h-55"></div>
           <div className="flex-2/3 text-main-text-dark">
             <h2 className="text-2xl md:text-4xl xl:text-5xl 2xl:text-6xl font-clash-display font-medium pb-10 md:leading-14 xl:leading-18">
               Hi, I&apos;m Weronika. <br />{" "}
@@ -52,13 +62,6 @@ const About = () => {
               </Button>
             </AnimateIcon>
           </div>
-          <Image
-            width={400}
-            height={400}
-            src={Author}
-            alt="Image of the author of the website"
-            className="flex-1/3 brightness-85 pb-12 lg:pb-0"
-          />
         </div>
       </MainContainer>
     </section>
