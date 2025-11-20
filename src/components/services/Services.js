@@ -12,7 +12,7 @@ import { HiOutlinePaintBrush } from "react-icons/hi2";
 const Services = () => {
   return (
     <section id="services" className="bg-secondary-dark">
-      <MainContainer className="py-20 p-10">
+      <MainContainer className="md:py-20 px-10">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 py-10">
           <div className="flex flex-col text-main-text-dark md:gap-2 xl:gap-0">
             <h2 className="font-clash-display text-4xl 2xl:text-5xl py-10 md:py-0 xl:py-5 2xl:py-10">

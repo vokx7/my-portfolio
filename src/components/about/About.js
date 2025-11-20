@@ -9,7 +9,7 @@ import { IoMdMail } from "react-icons/io";
 
 const About = () => {
   return (
-    <section id="about" className="pb-20 bg-secondary-dark">
+    <section id="about" className="pt-10 md:pt-30 bg-secondary-dark">
       <MainContainer>
         <div className="relative flex flex-col-reverse lg:flex-row items-center justify-center mx-10 p-16 rounded-xl bg-primary-dark gap-30 xl:gap-20">
           <div className="absolute bottom-0 lg:left-0 xl:left-10 2xl:left-20 ">
