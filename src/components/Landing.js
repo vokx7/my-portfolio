@@ -117,27 +117,13 @@ const Landing = () => {
 
           <MyFlower constraintsRef={constraintsRef} />
         </div>
-        {/* <motion.div
-          drag
-          dragConstraints={constraintsRef}
-          dragElastic={0.2}
-          animate={{
-            x: [0, 80, -60, 100, -80, 0],
-            y: [0, -40, 60, -30, 50, 0],
-          }}
-          transition={{
-            duration: 8,
-            repeat: Infinity,
-            ease: "easeInOut",
-          }}
-          className="flower absolute top-0 left-0 bg-hover"
-        />
+
         <motion.div
           drag
           dragConstraints={constraintsRef}
           dragElastic={0.2}
-          className="flower absolute top-70 left-60 bg-cta"
-        /> */}
+          className="flower absolute top-50 left-90 bg-cta lg:hidden"
+        />
       </MainContainer>
 
       <div className="relative w-full lg:w-1/3 h-[80vh] lg:h-auto overflow-r-hidden">
