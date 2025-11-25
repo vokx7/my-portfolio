@@ -20,7 +20,14 @@ const Projects = () => {
             <ProjecBox
               title="BeautyCare Management App"
               details="A web application that allows you to manage a company in the beauty industry."
-              tags={["Vite", "React", "Next.js", "Tailwind CSS"]}
+              tags={[
+                "Vite",
+                "React",
+                "React Query",
+                "Styled Components",
+                "React Router",
+                "Recharts",
+              ]}
               image={BeautyCare}
               href={"https://github.com/vokx7/beautycare-management-app"}
             />

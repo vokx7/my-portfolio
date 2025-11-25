@@ -1,13 +1,12 @@
 import Link from "next/link";
 import { client } from "@/sanity/client";
 import MainContainer from "@/components/common/MainContainer";
-import Image from "next/image";
-import Project from "../../../public/images/beautycare2.jpeg";
+import { urlFor } from "@/sanity/imageUrl";
 
 const POSTS_QUERY = `*[
   _type == "post"
   && defined(slug.current)
-]|order(publishedAt desc)[0...12]{_id, title, slug, publishedAt}`;
+]|order(publishedAt desc)[0...12]{_id, title, slug, publishedAt, image}`;
 
 const options = { next: { revalidate: 30 } };
 
@@ -27,19 +26,19 @@ const IndexPage = async () => {
           </p>
         </div>
         <hr className="text-hover" />
-        <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+        <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {posts.map((post) => (
             <li
               className="font-clash-display text-main-text-dark hover:brightness-85 hover:bg-secondary-dark hover:rounded-b-lg"
               key={post._id}
             >
               <Link href={`/blog/${post.slug.current}`}>
-                <Image
+                <img
                   width={600}
                   height={800}
-                  src={Project}
+                  src={post.image ? urlFor(post.image).width(600).url() : null}
                   alt="Image of the Project"
-                  className=""
+                  className="object-cover md:h-2/3"
                 />
                 <p className="my-4 px-4 text-base">
                   {new Date(post.publishedAt).toLocaleDateString()}
