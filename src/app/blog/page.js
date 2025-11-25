@@ -40,10 +40,10 @@ const IndexPage = async () => {
                   alt="Image of the Project"
                   className="object-cover md:h-2/3"
                 />
-                <p className="my-4 px-4 text-base">
+                <p className="my-4 px-4 lg:my-2 xl:my-4 text-xs 2xl:text-base">
                   {new Date(post.publishedAt).toLocaleDateString()}
                 </p>
-                <h2 className="text-2xl xl:text-3xl mb-4 tracking-wide px-4">
+                <h2 className="text-lg lg:text-base xl:text-xl 2xl:text-3xl mb-4 px-4">
                   {post.title}
                 </h2>
               </Link>
