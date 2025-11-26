@@ -30,7 +30,7 @@ export const NavElements = ({ className, onClick }) => {
   );
 };
 
-const Nav = ({ ref, isReversedColor }) => {
+const Nav = () => {
   const [isNavOpen, setIsNavOpen] = useState(false);
 
   useEffect(() => {
@@ -41,7 +41,7 @@ const Nav = ({ ref, isReversedColor }) => {
     }
   }, [isNavOpen]);
   return (
-    <nav ref={ref} className="text-2xl fixed top-0 right-0 px-10 py-14 z-50">
+    <nav className="text-2xl ml-auto">
       <div
         className="space-y-2 cursor-pointer"
         onClick={() => setIsNavOpen((prev) => !prev)}
@@ -49,9 +49,7 @@ const Nav = ({ ref, isReversedColor }) => {
         {[0, 1, 2].map((i) => (
           <motion.span
             key={i}
-            className={`block h-0.5 w-8 ${
-              isReversedColor ? "bg-primary-dark" : "bg-main-text-dark"
-            }`}
+            className="block h-0.5 w-8 bg-main-text-dark"
             animate={
               isNavOpen
                 ? i === 0
@@ -107,52 +105,19 @@ const Nav = ({ ref, isReversedColor }) => {
   );
 };
 
-import { usePathname } from "next/navigation";
-
 const Navigation = () => {
-  const navRef = useRef();
-  const [isReversedColor, setIsReversedColor] = useState(false);
-  const pathname = usePathname();
-
-  useEffect(() => {
-    const reversedSections = Array.from(
-      document.querySelectorAll(`[data-color="reversed"]`)
-    );
-    if (reversedSections.length === 0) return;
-
-    const handleScroll = () => {
-      const navHeight = navRef.current.offsetHeight / 2;
-
-      const anyReversedVisible = reversedSections.some((section) => {
-        const { top, bottom } = section.getBoundingClientRect();
-        return top <= navHeight && bottom > navHeight;
-      });
-
-      setIsReversedColor(anyReversedVisible);
-    };
-
-    handleScroll();
-
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, [pathname]);
-
   return (
-    <MainContainer>
-      <div className="flex flex-row items-center justify-between">
-        <div className="fixed top-0 left-0 px-10 py-4 my-10 z-40">
-          <Link
-            href="/"
-            className={`font-clash-display text-2xl tracking-wide ${
-              isReversedColor ? "text-primary-dark" : "text-main-text-dark"
-            }`}
-          >
-            w. pawlak
-          </Link>
-        </div>
-        <Nav ref={navRef} isReversedColor={isReversedColor} />
-      </div>
-    </MainContainer>
+    <div className="w-full fixed top-0 left-0 flex flex-row items-center justify-between px-10 py-14 z-40">
+      <Link
+        href="/"
+        className="font-clash-display text-2xl tracking-wide
+              text-main-text-dark"
+      >
+        w. pawlak
+      </Link>
+
+      <Nav />
+    </div>
   );
 };
 
