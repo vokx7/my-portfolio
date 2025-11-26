@@ -122,7 +122,7 @@ const Landing = () => {
           drag
           dragConstraints={constraintsRef}
           dragElastic={0.2}
-          className="flower absolute top-50 left-90 bg-cta lg:hidden"
+          className="flower absolute top-40 left-30 bg-cta lg:hidden"
         />
       </MainContainer>
 
