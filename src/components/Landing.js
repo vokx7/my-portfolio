@@ -105,10 +105,24 @@ const Landing = () => {
               </span>{" "}
               Get in touch, I&apos;d be happy to help.
             </motion.p>
-            <motion.div variants={item}>
+            <motion.div
+              variants={item}
+              className="flex flex-col md:flex-row gap-4 md:gap-8"
+            >
               <AnimateIcon animateOnHover>
                 <Button as="link" href="/contact" className={"w-58"}>
                   Contact me
+                  <MoveRight />
+                </Button>
+              </AnimateIcon>
+              <AnimateIcon animateOnHover>
+                <Button
+                  as="link"
+                  href="/blog"
+                  className={"w-58"}
+                  variant="outlined"
+                >
+                  Read my blog
                   <MoveRight />
                 </Button>
               </AnimateIcon>

@@ -26,10 +26,9 @@ const Projects = () => {
                 "React Query",
                 "Styled Components",
                 "React Router",
-                "Recharts",
               ]}
               image={BeautyCare}
-              href={"https://github.com/vokx7/beautycare-management-app"}
+              href={"/blog/beautycare-management-app"}
             />
             <ProjecBox
               title="Online Store Client"
@@ -42,7 +41,7 @@ const Projects = () => {
                 "Multi-Page Application",
               ]}
               image={OnlineStore}
-              href={"https://github.com/vokx7/online-store-client"}
+              href={"/blog/online-store-client"}
             />
           </div>
 
@@ -59,14 +58,14 @@ const Projects = () => {
                 "Node.js",
               ]}
               image={TransporterTravel}
-              href={"https://transporter-travel.pl/"}
+              href={"/blog/transporter-travel"}
             />
             <ProjecBox
               title="JW Fotografia"
               details="Professional photography portfolio website."
               tags={["React", "JavaScript", "Next.js", "CSS", "SEO"]}
               image={JWFotografia}
-              href={"https://jw-fotografia.vercel.app/"}
+              href={"/blog/jw-fotografia"}
             />
           </div>
         </div>

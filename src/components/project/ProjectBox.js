@@ -28,7 +28,7 @@ const ProjecBox = ({ title, details, tags, image, href }) => {
                 <Button
                   as="a"
                   href={href}
-                  className={"w-48 mb-6 lg:mb-0 px-4 h-10 bg-hover"}
+                  className={"w-48 mb-6 lg:mb-0 px-4 h-10 bg-cta"}
                 >
                   Find out more
                   <MoveRight />

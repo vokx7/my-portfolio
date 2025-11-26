@@ -3,8 +3,8 @@ import Button from "./Button";
 
 const WindowAlert = ({ onClick, loading }) => {
   return (
-    <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 flex flex-col gap-5 w-60 h-40 bg-secondary-dark rounded-xl z-10">
-      <div className="bg-primary-dark h-5 w-full flex items-center rounded-t-xl px-1">
+    <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 flex flex-col gap-5 w-60 h-40 bg-primary-dark rounded-xl z-10">
+      <div className="bg-secondary-dark h-5 w-full flex items-center rounded-t-xl px-1">
         <div className="flex items-center gap-2 p-2">
           <span className="w-2 h-2 rounded-full bg-[#ff5f57] shadow-sm border border-black/10"></span>
           <span className="w-2 h-2 rounded-full bg-[#febc2e] shadow-sm border border-black/10"></span>
@@ -25,7 +25,7 @@ const WindowAlert = ({ onClick, loading }) => {
           as="button"
           disabled={loading}
           onClick={onClick}
-          variant="outlined"
+          className="bg-hover"
         >
           {loading ? <Orbit animateOnView /> : "Yes!"}
         </Button>
