@@ -4,7 +4,7 @@ const ProjectCardInfoTech = ({ tags, className }) => {
       {tags.map((tag, i) => (
         <p
           key={i}
-          className={`text-sm rounded-lg text-secondary-dark bg-main-text-dark px-4 py-[5px] tracking-wide transition-colors duration-300 ${className}`}
+          className={`text-sm rounded-lg text-secondary-light bg-main-text-light dark:text-secondary-dark dark:bg-main-text-dark px-4 py-[5px] tracking-wide transition-colors duration-300 ${className}`}
         >
           {tag}
         </p>

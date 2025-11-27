@@ -11,12 +11,16 @@ import { HiOutlinePaintBrush } from "react-icons/hi2";
 
 const Services = () => {
   return (
-    <section id="services" className="bg-secondary-dark">
+    <section
+      id="services"
+      className="bg-secondary-light dark:bg-secondary-dark"
+    >
       <MainContainer className="md:py-20 px-10">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 py-10">
-          <div className="flex flex-col text-main-text-dark md:gap-2 xl:gap-0">
+          <div className="flex flex-col text-main-text-light dark:text-main-text-dark md:gap-2 xl:gap-0">
             <h2 className="font-clash-display text-4xl 2xl:text-5xl py-10 md:py-0 xl:py-5 2xl:py-10">
-              <span className="highlight">services</span>I provide
+              <span className="highlight-light dark:highlight">services</span>I
+              provide
             </h2>
             <p className="font-medium pb-4 max-w-120 text-sm xl:text-base">
               I create modern, efficient, and user-friendly web solutions. I pay
@@ -24,7 +28,11 @@ const Services = () => {
               intuitive user experiences.
             </p>
             <AnimateIcon animateOnHover>
-              <Button as="link" href="/contact" className={"w-50 bg-hover"}>
+              <Button
+                as="link"
+                href="/contact"
+                className={"w-50 dark:bg-hover"}
+              >
                 Let&apos;s talk
                 <MoveRight />
               </Button>

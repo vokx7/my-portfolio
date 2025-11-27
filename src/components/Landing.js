@@ -2,7 +2,7 @@
 import Image from "next/image";
 import Button from "./common/Button";
 import MainContainer from "./common/MainContainer";
-import LandingPhoto from "../../public/images/flowers.jpg";
+import LandingPhoto from "../../public/images/kb2.jpg";
 
 import { motion } from "motion/react";
 import { AnimateIcon } from "./animate-ui/icons/icon";
@@ -66,7 +66,7 @@ const Landing = () => {
   return (
     <section
       id="main"
-      className="flex flex-col lg:flex-row justify-center gap-6 min-h-screen mt-26 lg:mt-0"
+      className="flex flex-col lg:flex-row justify-center gap-6 min-h-screen mt-26 lg:mt-0 text-main-text-light dark:text-main-text-dark"
     >
       <MainContainer>
         <div
@@ -75,7 +75,7 @@ const Landing = () => {
         >
           <div>
             <motion.h1
-              className="font-clash-display font-bold text-6xl xl:text-8xl 2xl:text-9xl my-10 text-main-text-dark tracking-wide"
+              className="font-clash-display font-bold text-6xl xl:text-8xl 2xl:text-9xl my-10  tracking-wide"
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, ease: "easeOut" }}
@@ -87,20 +87,24 @@ const Landing = () => {
           <motion.div variants={container} initial="hidden" animate="show">
             <motion.p
               variants={item}
-              className="mb-8 lg:mb-10 text-lg lg:text-xl text-main-text-dark md:max-w-2xl"
+              className="mb-8 lg:mb-10 text-lg lg:text-xl  md:max-w-2xl"
             >
               Hi, I&apos;m
-              <span className="highlight"> Weronika Pawlak</span>, and I have 2
-              years of experience building modern websites and web applications.
-              As a <span className="highlight">front-end developer</span> with a
+              <span className="highlight-light dark:highlight">
+                {" "}
+                Weronika Pawlak
+              </span>
+              , and I have 2 years of experience building modern websites and
+              web applications. As a{" "}
+              <span className="dark:highlight">front-end developer</span> with a
               passion for design, I combine aesthetics with code, so your brand
               has a{" "}
-              <span className="highlight">
+              <span className="highlight-light dark:highlight">
                 stylish and functional online presence.
               </span>{" "}
               I work primarily in React, with attention to detail, UX, and
               responsiveness.{" "}
-              <span className="highlight">
+              <span className="highlight-light dark:highlight">
                 Want to create something unique?
               </span>{" "}
               Get in touch, I&apos;d be happy to help.
@@ -136,7 +140,7 @@ const Landing = () => {
           drag
           dragConstraints={constraintsRef}
           dragElastic={0.2}
-          className="flower absolute top-40 left-30 bg-cta lg:hidden"
+          className="flower absolute top-40 left-30 bg-cta-light dark:bg-cta lg:hidden"
         />
       </MainContainer>
 
@@ -148,7 +152,7 @@ const Landing = () => {
           className="object-cover"
           priority
         />
-        <div className="absolute inset-0 bg-black/30" />
+        <div className="absolute inset-0 bg-black/10 dark:bg-black/50" />
 
         <WindowAlert onClick={generateImage} loading={loading} />
         {dogImages.map((dog) => (

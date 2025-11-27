@@ -37,7 +37,7 @@ const MyFlower = ({ constraintsRef, size = 20 }) => {
     <motion.div
       drag
       dragConstraints={constraintsRef}
-      className="flower bg-hover absolute hidden lg:block"
+      className="flower bg-cta-light dark:bg-hover absolute hidden lg:block"
       animate={controls}
     />
   );

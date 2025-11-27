@@ -10,10 +10,10 @@ const Button = ({
   as = "link",
   href = "",
 }) => {
-  const primaryClasses = "bg-cta text-secondary-dark";
+  const primaryClasses = "bg-cta-light dark:bg-cta dark:text-secondary-dark";
 
   const outlinedClasses =
-    "bg-transparent text-hover border-1 border-hover hover:text-primary-dark hover:bg-hover";
+    "bg-transparent dark:text-hover border-1 border-main-text-light dark:border-hover hover:text-secondary-light hover:bg-main-text-light dark:hover:text-primary-dark dark:hover:bg-hover";
 
   const selectedClasses = useMemo(() => {
     switch (variant) {

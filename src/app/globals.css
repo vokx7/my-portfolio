@@ -3,7 +3,7 @@
 @plugin "@tailwindcss/typography";
 @import "tw-animate-css";
 
-@custom-variant dark (&:is(.dark *));
+@custom-variant dark (&:where(.dark, .dark *));
 
 @font-face {
   font-family: Clash Display;
@@ -16,16 +16,17 @@
 @theme {
   /* --font-cormorant-garamond: "Cormorant Garamond", serif; */
   --font-clash-display: "Clash Display", "sans-serif";
-  /* --color-lavender: #ECE4FF; */
-  /* --color-beige: #F6F5F1; */
+
+  --color-primary-light: #DCD6F7;
+  --color-secondary-light: #F4EEFF;
+  --color-main-text-light: #424874;
+  --color-cta-light: #EE6983;
 
   --color-primary-dark: #313647;
   --color-secondary-dark: #212430;
   --color-main-text-dark: #DCE3EB;
   --color-cta: #E7C6C2;
   --color-hover: #C7C9E9;
-
-  --color-myblack: #212121;
 }
 
  html {
@@ -48,6 +49,31 @@
       rgba(229, 191, 211, 0) 0%,
       rgba(229, 191, 211, 0.3) 7.9%,
       rgba(229, 191, 211, 0) 35%
+    );
+  padding: 0.15em 0.35em;
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+  border-radius: 6px;
+  transition: background 0.3s ease;
+}
+
+.highlight-light {
+  font-weight: 600;
+  background: 
+    linear-gradient(
+      104deg,
+      rgba(238, 105, 131, 0) 0.9%,
+      rgba(238, 105, 131, 0.75) 2.4%,
+      rgba(238, 105, 131, 0.45) 5.8%,
+      rgba(238, 105, 131, 0.15) 93%,
+      rgba(238, 105, 131, 0.6) 96%,
+      rgba(238, 105, 131, 0) 98%
+    ),
+    linear-gradient(
+      183deg,
+      rgba(238, 105, 131, 0) 0%,
+      rgba(238, 105, 131, 0.25) 7.9%,
+      rgba(238, 105, 131, 0) 35%
     );
   padding: 0.15em 0.35em;
   box-decoration-break: clone;

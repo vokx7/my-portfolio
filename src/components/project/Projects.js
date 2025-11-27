@@ -9,11 +9,12 @@ const Projects = () => {
     <section
       data-color="reversed"
       id="projects"
-      className="bg-primary-dark pb-24 min-h-screen relative"
+      className="bg-primary-light dark:bg-primary-dark pb-24 min-h-screen relative"
     >
       <div className="max-w-[120rem] m-auto px-6 lg:px-12">
-        <h2 className="font-clash-display text-main-text-dark text-6xl md:text-8xl py-22">
-          selection <br /> of <span className="highlight">projects</span>{" "}
+        <h2 className="font-clash-display text-main-text-light dark:text-main-text-dark text-6xl md:text-8xl py-22">
+          selection <br /> of{" "}
+          <span className="highlight-light dark:highlight">projects</span>{" "}
         </h2>
         <div className="flex flex-col gap-6">
           <div className="flex flex-col lg:flex-row gap-4 group">

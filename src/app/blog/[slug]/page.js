@@ -23,7 +23,7 @@ const PostPage = async ({ params }) => {
     : null;
 
   return (
-    <article className="prose md:prose-lg 2xl:prose-xl prose-a:text-main-text-dark prose-p:text-main-text-dark prose-headings:text-main-text-dark prose-li:text-main-text-dark container mx-auto min-h-screen max-w-3xl p-8 flex flex-col gap-4 ">
+    <article className="prose md:prose-lg 2xl:prose-xl prose-a:text-main-text-light prose-p:text-main-text-light prose-headings:text-main-text-light prose-li:text-main-text-light dark:prose-a:text-main-text-dark dark:prose-p:text-main-text-dark dark:prose-headings:text-main-text-dark dark:prose-li:text-main-text-dark container mx-auto min-h-screen max-w-3xl p-8 flex flex-col gap-4 ">
       <AnimateIcon animateOnHover>
         <Link
           href="/blog"
