@@ -90,21 +90,17 @@ const Landing = () => {
               className="mb-8 lg:mb-10 text-lg lg:text-xl  md:max-w-2xl"
             >
               Hi, I&apos;m
-              <span className="highlight-light dark:highlight">
-                {" "}
-                Weronika Pawlak
-              </span>
-              , and I have 2 years of experience building modern websites and
-              web applications. As a{" "}
-              <span className="dark:highlight">front-end developer</span> with a
+              <span className="highlight"> Weronika Pawlak</span>, and I have 2
+              years of experience building modern websites and web applications.
+              As a <span className="highlight">front-end developer</span> with a
               passion for design, I combine aesthetics with code, so your brand
               has a{" "}
-              <span className="highlight-light dark:highlight">
+              <span className="highlight">
                 stylish and functional online presence.
               </span>{" "}
               I work primarily in React, with attention to detail, UX, and
               responsiveness.{" "}
-              <span className="highlight-light dark:highlight">
+              <span className="highlight">
                 Want to create something unique?
               </span>{" "}
               Get in touch, I&apos;d be happy to help.

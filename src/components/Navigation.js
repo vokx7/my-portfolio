@@ -96,7 +96,7 @@ const Nav = () => {
             </motion.div>
             <NavElements
               onClick={() => setIsNavOpen(false)}
-              className="text-6xl md:text-8xl xl:text-7xl 2xl:text-9xl text-main-text-light dark:text-main-text-dark font-clash-display font-medium tracking-wide relative after:absolute after:bottom-0 after:left-1/2 after:w-0 after:h-[4px] after:bg-main-text-light dark:after:bg-main-text-dark after:transition-all after:duration-300 after:ease-in-out hover:after:left-0 hover:after:w-full"
+              className="text-5xl 2xl:text-8xl text-main-text-light dark:text-main-text-dark font-clash-display font-medium tracking-wide relative after:absolute after:bottom-0 after:left-1/2 after:w-0 after:h-[4px] after:bg-main-text-light dark:after:bg-main-text-dark after:transition-all after:duration-300 after:ease-in-out hover:after:left-0 hover:after:w-full"
             />
           </motion.div>
         )}

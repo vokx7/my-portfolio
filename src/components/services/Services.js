@@ -19,8 +19,7 @@ const Services = () => {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 py-10">
           <div className="flex flex-col text-main-text-light dark:text-main-text-dark md:gap-2 xl:gap-0">
             <h2 className="font-clash-display text-4xl 2xl:text-5xl py-10 md:py-0 xl:py-5 2xl:py-10">
-              <span className="highlight-light dark:highlight">services</span>I
-              provide
+              <span className="highlight">services</span>I provide
             </h2>
             <p className="font-medium pb-4 max-w-120 text-sm xl:text-base">
               I create modern, efficient, and user-friendly web solutions. I pay

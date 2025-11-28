@@ -28,10 +28,8 @@ const About = () => {
           <div className="flex-2/3 text-main-text-light dark:text-main-text-dark">
             <h2 className="text-2xl md:text-4xl xl:text-5xl 2xl:text-6xl font-clash-display font-medium pb-10 md:leading-14 xl:leading-18">
               Hi, I&apos;m Weronika. <br />{" "}
-              <span className="highlight-light dark:highlight">
-                Front-end developer
-              </span>
-              , based in Wrocław, Poland.
+              <span className="highlight">Front-end developer</span>, based in
+              Wrocław, Poland.
             </h2>
             <div className="flex flex-col md:flex-row gap-6 mb-6">
               <a
